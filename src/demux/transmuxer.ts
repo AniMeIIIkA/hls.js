@@ -34,8 +34,8 @@ type MuxConfig =
   | { demux: typeof MP3Demuxer; remux: typeof MP4Remuxer };
 
 const muxConfig: MuxConfig[] = [
-  { demux: TSDemuxer, remux: MP4Remuxer },
   { demux: MP4Demuxer, remux: PassThroughRemuxer },
+  { demux: TSDemuxer, remux: MP4Remuxer },
   { demux: AACDemuxer, remux: MP4Remuxer },
   { demux: MP3Demuxer, remux: MP4Remuxer },
 ];
